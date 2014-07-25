@@ -26,7 +26,7 @@ if (nrhs!=4)
 else if (nlhs>2)
   mexErrMsgTxt("Too many output arguments.");
   
-if (!mxIsDouble(prhs[0]))
+if (!mxIsSingle(prhs[0]))
 	mexErrMsgTxt("First argument must be double.");
 
 
@@ -45,7 +45,7 @@ f = (int)(mxGetScalar(prhs[2]));
 h = (double)(mxGetScalar(prhs[3]));
 
 /*Allocate memory and assign output pointer*/
-plhs[0] = mxCreateNumericArray(ndim,dims,mxDOUBLE_CLASS, mxREAL);
+plhs[0] = mxCreateNumericArray(ndim,dims,mxSINGLE_CLASS, mxREAL);
 
 /*Get a pointer to the data space in our newly allocated memory*/
 fima = mxGetPr(plhs[0]);

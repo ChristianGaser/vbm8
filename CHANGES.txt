@@ -1509,9 +1509,62 @@ Added HDW path to cg_vbm8_defs.m.
 ------------------------------------------------------------------------
 r440 | gaser | 2012-03-28 09:50:46
 
+M       AmapMex.mexa64
+M       AmapMex.mexw64
 M       CHANGES.txt
+M       cg_slice_overlay.m
+M       cg_vbm8_brainmask.m
+M       compile.m
+M       down_cut.mexa64
+M       down_cut.mexw64
+M       eikonal3.mexa64
+M       eikonal3.mexw64
+M       median3.mexa64
+M       median3.mexw64
+M       ornlmMex.c
+M       ornlmMex.m
+M       ornlmMex.mexmaci64
+M       sanlmMex.mexa64
+M       sanlmMex.mexw64
+M       sanlmMex_noopenmp.mexa64
 M       tbx_cfg_vbm8.m
+M       vbdist.mexa64
+M       vbdist.mexw64
 
-Corrected "BlaBlaBla" in tbx_cfg_vbm8.m
+(1) Corrected slice view in cg_slice_overlay.m.
+(2) Added help text to tbx_cfg_vbm8.m
+(3) Restriction to single format for ornlm-filter.
+(4) Recompilation
+
 ------------------------------------------------------------------------
-r441 | gaser | 2012-09-13 12:54:59
+r442 | gaser | 2014-07-25 11:27:36
+
+M       AmapMex.mexa64
+M       AmapMex.mexw64
+M       CHANGES.txt
+M       cg_slice_overlay.m
+M       cg_vbm8_brainmask.m
+M       compile.m
+M       down_cut.mexa64
+M       down_cut.mexw64
+M       eikonal3.mexa64
+M       eikonal3.mexw64
+M       median3.mexa64
+M       median3.mexw64
+M       ornlmMex.c
+M       ornlmMex.m
+M       ornlmMex.mexmaci64
+M       sanlmMex.mexa64
+M       sanlmMex.mexw64
+M       sanlmMex_noopenmp.mexa64
+M       tbx_cfg_vbm8.m
+M       vbdist.mexa64
+M       vbdist.mexw64
+
+(1) Corrected slice view in cg_slice_overlay.m.
+(2) Added help text to tbx_cfg_vbm8.m
+(3) Restriction to single format for ornlm-filter.
+(4) Recompilation
+
+------------------------------------------------------------------------
+r442 | gaser | 2014-07-25 11:27:52

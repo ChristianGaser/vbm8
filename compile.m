@@ -3,6 +3,7 @@ function compile
 rand('state',0);
 d = single(rand(50,50,50));
 
+% mex -Dchar16_t=UINT16_T ???
 mex -O AmapMex.c Kmeans.c Amap.c MrfPrior.c Pve.c vollib.c
 mex -O median3.c
 mex -O eikonal3.c

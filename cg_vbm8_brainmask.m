@@ -17,6 +17,20 @@ vx = sqrt(sum((VF.mat(1:3,1:3)).^2))';
 correct_nu = 1;
 [label, cls] = BayesMex(src, priors, vx, correct_nu);
 
+figure(11)
+slice = round(VF.dim(3)/2);
+tmp = double(src(:,:,slice));
+subplot(1,3,1)
+imagesc(tmp)
+axis image
+drawnow
+
+subplot(1,3,2)
+tmp = (label(:,:,slice));
+imagesc(tmp)
+axis image
+drawnow
+
 % create mask of GM/WM
 
 mask = single(cls(:,:,:,1));
@@ -47,6 +61,11 @@ init_kmeans = 1
 label(mask==0) = 0;
 src(mask==0) = 0;
 prob = AmapMex(src, label, n_classes, n_iters, sub, pve, init_kmeans, mrf_weight, vx, iters_icm, bias_fwhm);
+
+subplot(1,3,3)
+imagesc(prob(:,:,slice,1))
+axis image
+drawnow
 
 th = 2.5;
 mask = (label<th*255/3 & label>255/3);
