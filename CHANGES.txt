@@ -1584,3 +1584,14 @@ M       cg_vbm8_write.m
 
 ------------------------------------------------------------------------
 r443 | gaser | 2015-12-17 14:08:08
+
+M       CHANGES.txt
+
+(1) Added: cg_vbm8_version.m that is reading the Content.txt that can be also 
+    read if SPM is in deployed mode (using the compiled version that prevents 
+    to read *.m files.
+(2) Changed: replaced checks for VBM version using "ver" and use 
+    cg_vbm8_version throughout.
+
+------------------------------------------------------------------------
+r444 | gaser | 2015-12-17 14:26:34
