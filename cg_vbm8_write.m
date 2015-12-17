@@ -121,7 +121,7 @@ for n=1:N,
     end
 end
 
-do_cls   = any(tc(:)) || any(lb) || any(df) || nargout>1;
+do_cls   = any(tc(:)) || any(lb) || any(df) || any(jc) || nargout>1;
 tiss(Kb) = struct('Nt',[]);
 cls      = cell(1,Kb);
 for k1=1:Kb,
@@ -995,13 +995,9 @@ if do_cls && warp.print
   
   % get current release numbers
   A = ver;
+  [n,r_vbm] = cg_vbm8_version;
+  [n, r_spm] = spm('Ver');
   for i=1:length(A)
-    if strcmp(A(i).Name,'Voxel Based Morphometry Toolbox')
-      r_vbm = A(i).Version;
-    end
-    if strcmp(A(i).Name,'Statistical Parametric Mapping')
-      r_spm = A(i).Version;
-    end
     if strcmp(A(i).Name,'MATLAB')
       r_matlab = A(i).Version;
     end

@@ -1568,3 +1568,19 @@ M       vbdist.mexw64
 
 ------------------------------------------------------------------------
 r442 | gaser | 2014-07-25 11:27:52
+
+M       CHANGES.txt
+M       Makefile.vbm
+M       cg_vbm8_defaults.m
+M       cg_vbm8_update.m
+A       cg_vbm8_version.m
+M       cg_vbm8_write.m
+
+(1) Added: cg_vbm8_version.m that is reading the Content.txt that can be also 
+    read if SPM is in deployed mode (using the compiled version that prevents 
+    to read *.m files.
+(2) Changed: replaced checks for VBM version using "ver" and use 
+    cg_vbm8__version throughout.
+
+------------------------------------------------------------------------
+r443 | gaser | 2015-12-17 14:08:08

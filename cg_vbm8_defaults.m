@@ -30,23 +30,23 @@ vbm8.opts.samp      = 3;      % Sampling distance
 %   modulated 0/1/2 (none/affine+nonlinear/nonlinear only)
 %   dartel    0/1/2 (none/rigid/affine)
 
-vbm8.output.bias.native  = 1;
-vbm8.output.bias.warped  = 0;
+vbm8.output.bias.native  = 0;
+vbm8.output.bias.warped  = 1;
 vbm8.output.bias.affine  = 0;
 
-vbm8.output.label.native = 1;
+vbm8.output.label.native = 0;
 vbm8.output.label.warped = 0;
 vbm8.output.label.dartel = 0;
 
 % order is [native normalised modulated dartel]
-vbm8.output.GM.native = 1;  % GM
+vbm8.output.GM.native = 0;  % GM
 vbm8.output.GM.warped = 0;  % GM
-vbm8.output.GM.mod    = 0;  % GM
+vbm8.output.GM.mod    = 2;  % GM
 vbm8.output.GM.dartel = 0;  % GM
 
 vbm8.output.WM.native = 0;  % WM
 vbm8.output.WM.warped = 0;  % WM
-vbm8.output.WM.mod    = 0;  % WM
+vbm8.output.WM.mod    = 2;  % WM
 vbm8.output.WM.dartel = 0;  % WM
 
 vbm8.output.CSF.native = 0; % CSF

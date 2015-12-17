@@ -17,15 +17,9 @@ if nargin == 0
   update = 0;
 end
 
-r = 0;
-
 % get current release number
-A = ver;
-for i=1:length(A)
-  if strcmp(A(i).Name,'Voxel Based Morphometry Toolbox')
-    r = str2double(A(i).Version);
-  end
-end
+[n,r] = cg_vbm8_version;
+r = str2double(r);
 
 url = 'http://dbm.neuro.uni-jena.de/vbm8/';
 
