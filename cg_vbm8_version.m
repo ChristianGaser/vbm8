@@ -7,7 +7,7 @@ function [VBMrel, VBMver]  = cg_vbm8_version
 % modified version of spm_version.m
 %_______________________________________________________________________
 % Christian Gaser
-% $Id: cg_vbm8_version.m 774 2015-11-18 15:53:05Z gaser $
+% $Id$
 
 persistent VBM_VER;
 v = VBM_VER;
