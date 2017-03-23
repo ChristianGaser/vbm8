@@ -22,6 +22,7 @@ if nargin == 0
 
 end
 
+
 % check filename whether log. scaling was used
 OV.logP = zeros(size(OV.name,1));
 for i=1:size(OV.name,1)
@@ -112,7 +113,11 @@ SO.img(2).vol = spm_vol(img);
 
 SO.img(2).prop = OV.opacity;   % transparent overlay
 SO.img(2).cmap = OV.cmap;	    % colormap
-SO.img(2).func = 'i1(i1==0)=NaN;';
+if isfield(OV,'func')
+  SO.img(2).func = OV.func;
+else
+  SO.img(2).func = 'i1(i1==0)=NaN;';
+end
 
 if ~isfield(OV,'range')
 	  [mx mn] = volmaxmin(OV.img(2).vol);
